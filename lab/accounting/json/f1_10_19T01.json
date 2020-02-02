@@ -1,0 +1,81 @@
+{
+    "version": "1.0.0",
+    "qNo": "f1_10_19T01",
+    "qtype": "siwake",
+    "title": "保険差益",
+    "field": "f",
+    "lec": "1",
+    "genre": "10",
+    "tags": [],
+    "question": "次の取引について仕訳しなさい。\n１．営業所建物（取得原価20000千円、減価償却累計額11000千円）が期首に消失した。但し、この建物には、総額15000千円の保険を掛けており、保険会社への保険金支払の請求を行った。\n２．保険会社より、査定の結果、保険金15000千円を支払う旨の通知を受けた。\n３．焼失した建物に代わる建物を購入し、代金24000千円を小切手で支払った。\n４．上記建物について、保険差益相当分の圧縮記帳を行った。",
+    "items": [
+        {
+            "title": "",
+            "subtitle": "",
+            "lname": null,
+            "lprice": null,
+            "rname": null,
+            "rprice": null
+        }
+    ],
+    "answers": [
+        {
+            "title": "1.",
+            "subtitle": null,
+            "lname": "減価償却累計額",
+            "lprice": 11000,
+            "rname": "建物",
+            "rprice": 20000,
+            "comment": null
+        },
+        {
+            "title": null,
+            "subtitle": null,
+            "lname": "火災未決算",
+            "lprice": 9000,
+            "rname": "",
+            "rprice": null,
+            "comment": null
+        },
+        {
+            "title": "2.",
+            "subtitle": null,
+            "lname": "未収金",
+            "lprice": 15000,
+            "rname": "火災未決算",
+            "rprice": 9000,
+            "comment": null
+        },
+        {
+            "title": null,
+            "subtitle": null,
+            "lname": "",
+            "lprice": null,
+            "rname": "保険差益",
+            "rprice": 6000,
+            "comment": null
+        },
+        {
+            "title": "3.",
+            "subtitle": null,
+            "lname": "建物",
+            "lprice": 24000,
+            "rname": "当座預金",
+            "rprice": 24000,
+            "comment": null
+        },
+        {
+            "title": "4.",
+            "subtitle": null,
+            "lname": "建物圧縮損",
+            "lprice": 6000,
+            "rname": "建物",
+            "rprice": 6000,
+            "comment": null
+        }
+    ],
+    "memo": "テキスト p276",
+    "answerDescription": "",
+    "answerCommentary": "",
+    "createdate": "2016/10/24 23:33"
+}

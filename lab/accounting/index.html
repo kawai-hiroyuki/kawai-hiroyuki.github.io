@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- android chrome theme-color -->
+    <meta name="theme-color" content="#337ab7">
+    <title>会計学</title>
+    <link rel="stylesheet" href="../../css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="center-block text-center">
+            <div id="accounting">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="panel-title">財務会計</div>
+                    </div>
+                    <ul class="list-group text-left">
+                        <li v-for="quiz in fieldFilter('f')" class="list-group-item">
+                            <my-quizlink v-bind:quiz="quiz"></my-quizlink>
+                            <!--<span class="badge">{{ quiz.tags }}</span> -->
+                        </li>
+                    </ul>
+                    <div class="panel-heading">
+                        <div class="panel-title">管理会計</div>
+                    </div>
+                    <ul class="list-group text-left">
+                        <li v-for="quiz in fieldFilter('m')" class="list-group-item">
+                            <my-quizlink v-bind:quiz="quiz"></my-quizlink>
+                            <!--<span class="badge">{{ quiz.tags }}</span> -->
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="panel-title">ツール</div>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="createQuestion.html">問題作成ツール</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="panel-title">リンク</div>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="http://kawai-hiroyuki.github.io">トップに戻る</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/jquery-1.11.0.js"></script>
+    <script src="../../js/vuejs/vue.min.js"></script>
+    <script src="./js/list.js"></script>
+</body>
+</html>

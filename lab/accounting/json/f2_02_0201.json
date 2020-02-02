@@ -1,0 +1,42 @@
+{
+    "version": "1.0.0",
+    "qNo": "f2_02_0201",
+    "qtype": "siwake",
+    "title":"返品調整引当金",
+    "field": "f",
+    "lec": "2",
+    "genre": "02",
+    "tags": [],
+    "question": "以下の取引について仕訳を示しなさい。\n（１）決算において売掛金期末残高800,000千円に対して返品率5%及び利益率20%を各々乗ずることによって返品調整引当金を設定した。\n（２）翌期において、前期売上分30,000千円（売価）が返品され掛と相殺した（三分割法）。",
+    "items": [
+        {
+            "lname": null,
+            "lprice": null,
+            "rname": null,
+            "rprice": null
+        }
+    ],
+    "answers": [
+        {
+            "lname": "売上割戻引当金繰入",
+            "lprice": 8000,
+            "rname": "売上割戻引当金",
+            "rprice": 8000
+        },
+        {
+            "lname": "返品調整引当金",
+            "lprice": 6000,
+            "rname": "売掛金",
+            "rprice": 30000
+        },
+        {
+            "lname": "仕入",
+            "lprice": 24000,
+            "rname": "",
+            "rprice": null
+        }
+    ],
+    "memo": null,
+    "answerDescription": "",
+    "createdate": "2016/10/17 00:16"
+}

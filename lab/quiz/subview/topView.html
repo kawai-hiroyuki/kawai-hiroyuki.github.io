@@ -1,0 +1,33 @@
+<script>
+  $(function(){
+    topViewLoaded();
+  });
+</script>
+
+<div id='quiz_title'></div>
+<div id='quiz_msg'>
+  <p>このクイズは４択形式のクイズです。</p>
+  <p>全部で１０問あり、満点は１００点です。</p>
+  <p></p>
+  <p>あなたは何点取れるでしょうか？</p>
+
+  <div id='quiz_start'>ＳＴＡＲＴ</div>
+</div>
+
+<div id='quiz_wrap'></div>
+
+<div id='creditView'>
+  Created by<a id='credit' href='creditUrl' target='_blank'>creditTitle</a>
+</div>
+<div id='imageView' style="display: none">
+  <div id='dsp0'><img id="dsp_img0" src='image/0.png' /></div>
+  <div id='dsp1'><img id="dsp_img1" src='image/1.png' /></div>
+</div>
+<div id='soundView'>
+  <p><span style='font-size:11px;'>※注：音が出ます。</span></p>
+  <embed src='sound/0.wav' hidden='true' autostart='false' />
+  <embed src='sound/1.wav' hidden='true' autostart='false' />
+</div>
+<div id='timerView' style="display: none">
+  <div id='q_timer_div'></div>
+</div>

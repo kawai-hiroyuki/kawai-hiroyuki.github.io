@@ -1,0 +1,57 @@
+{
+    "version": "1.0.0",
+    "qNo": "f1_10_03T01",
+    "qtype": "siwake",
+    "title": "自家建設",
+    "field": "f",
+    "lec": "1",
+    "genre": "10",
+    "tags": [],
+    "question": "以下の取引について仕訳を示しなさい。\n当社は自家用の機械を制作し完成した。そのために材料80000円、賃金70000円、製造経費50000円を要した。",
+    "items": [
+        {
+            "title": "",
+            "subtitle": "",
+            "lname": null,
+            "lprice": null,
+            "rname": null,
+            "rprice": null
+        }
+    ],
+    "answers": [
+        {
+            "title": null,
+            "subtitle": null,
+            "unit": "",
+            "lname": "機械",
+            "lprice": 200000,
+            "rname": "材料仕入",
+            "rprice": 80000,
+            "comment": null
+        },
+        {
+            "title": null,
+            "subtitle": null,
+            "unit": "",
+            "lname": "",
+            "lprice": null,
+            "rname": "賃金",
+            "rprice": 70000,
+            "comment": null
+        },
+        {
+            "title": null,
+            "subtitle": null,
+            "unit": "",
+            "lname": "",
+            "lprice": null,
+            "rname": "製造経費",
+            "rprice": 50000,
+            "comment": null
+        }
+    ],
+    "memo": "テキスト p255",
+    "answerDescription": "",
+    "answerCommentary": "",
+    "createdate": "2016/10/24 20:55"
+}

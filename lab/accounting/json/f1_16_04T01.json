@@ -1,0 +1,47 @@
+{
+    "version": "1.0.0",
+    "qNo": "f1_16_04T01",
+    "qtype": "siwake",
+    "title": "開発費",
+    "field": "f",
+    "lec": "1",
+    "genre": "16",
+    "tags": [],
+    "question": "次の取引について、支出額を繰延資産として計上する場合の仕訳を示しなさい。\n１．当社は、期首に新商品販売に伴う新市場を開拓するべく、特別の広告宣伝を行い、広告料500000円を現金で支払った。\n２．決算において、開発費につき5年間で月割均等償却を行う。",
+    "items": [
+        {
+            "title": "",
+            "subtitle":"",
+            "lname": null,
+            "lprice": null,
+            "rname": null,
+            "rprice": null
+        }
+    ],
+    "answers": [
+        {
+            "title": null,
+            "subtitle":null,
+            "unit":"",
+            "lname": "開発費",
+            "lprice": 500000,
+            "rname": "現金",
+            "rprice": 500000,
+            "comment":null
+        },
+        {
+            "title": null,
+            "subtitle":null,
+            "unit":"",
+            "lname": "開発費償却",
+            "lprice": 100000,
+            "rname": "開発費",
+            "rprice": 100000,
+            "comment":"500000 * 12ヶ月/60ヶ月 = 100000"
+        }
+    ],
+    "memo": "テキスト p389",
+    "answerDescription": "",
+    "answerCommentary": "",
+    "createdate": "2016/10/24 18:45"
+}

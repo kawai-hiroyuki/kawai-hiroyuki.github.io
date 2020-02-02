@@ -1,0 +1,42 @@
+{
+    "version": "1.0.0",
+    "qNo": "f2_02_0301",
+    "qtype": "siwake",
+    "title": "製品保証引当金",
+    "field": "f",
+    "lec": "2",
+    "genre": "02",
+    "tags": [],
+    "question": "以下の取引について仕訳を示しなさい。\n（１）決算にあたり、製品保証引当金として当期売上高5,000,000円の0.5%相当額を設定する。\n（２）翌期になり製品保証費35,000円を現金で支払った。但し、当該製品保証費のうち、前期で販売した製品に係る分は20,000円であった。",
+    "items": [
+        {
+            "lname": null,
+            "lprice": null,
+            "rname": null,
+            "rprice": null
+        }
+    ],
+    "answers": [
+        {
+            "lname": "製品保証引当金繰入",
+            "lprice": 25000,
+            "rname": "製品保証引当金",
+            "rprice": 25000
+        },
+        {
+            "lname": "製品保証費",
+            "lprice": 15000,
+            "rname": "現金",
+            "rprice": 35000
+        },
+        {
+            "lname": "返品調整引当金",
+            "lprice": 20000,
+            "rname": "",
+            "rprice": null
+        }
+    ],
+    "memo": null,
+    "answerDescription": "",
+    "createdate": "2016/10/17 00:23"
+}

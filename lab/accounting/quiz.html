@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- android chrome theme-color -->
+    <meta name="theme-color" content="#337ab7">
+	<title>会計学</title>
+	<link rel="stylesheet" href="../../css/bootstrap/bootstrap.css">
+	<link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body>
+	<div id="accounting">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="center-block text-center">
+					<h5>{{q.field}}-{{q.lec}}-{{q.genre}}</h5>
+				</div>
+			</div>
+			<article class="row">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<div class="panel-title">問題</div>
+					</div>
+					<div>
+						<h4>{{{question}}}</h4>
+					</div>
+				</div>
+			</article>
+			<section class="row">
+				<div v-for="(index, item) in q.items" track-by="$index">
+					<div class="row">
+						<div class="col-xs-10 col-md-5 pull-left">
+							<div class="input-group">
+								<span class="input-group-addon">(</span>
+								<input v-model="item.lname" class="form-control" type="text" placeholder="借方">
+								<span class="input-group-addon">)</span>
+								<input v-model="item.lprice" class="form-control" type="number">
+							</div>
+						</div>
+						<div class="col-xs-offset-1 col-xs-10 col-md-5">
+							<div class="input-group">
+								<span class="input-group-addon">(</span>
+								<input v-model="item.rname" class="form-control" type="text" placeholder="貸方">
+								<span class="input-group-addon">)</span>
+								<input v-model="item.rprice" class="form-control" type="number">
+							</div>
+						</div>
+						<div class="col-xs-1 col-md-1">
+							<div v-if="index == q.items.length - 1">
+								<button v-on:click="doAdd($index)" class="btn btn-warning" type="button">+</button>
+							</div>
+							<div v-if="$index != 0">
+								<button v-on:click="doRemove($index)" class="btn btn-info" type="button">-</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section v-if="isShowAnswer" class="row">
+				<!-- 正解欄 -->
+				<div>
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<div class="panel-title">解答</div>
+						</div>
+						<div v-if="q.answers">
+							<div class="center-block text-center">
+								<h4 class="text-success">{{answerTitle}}</h4>
+							</div>
+						</div>
+						<div class="list-group" v-if="q.answers">
+							<div v-for="(index, item) in q.answers" track-by="$index">
+								<div v-if="item.title || item.subtitle">
+									<div class="list-group-item">
+										<div class="h5 siwake-title">{{{item.title}}}</div>
+										<div class="h6 siwake-title">{{{item.subtitle}}}</div>
+									</div>
+								</div>
+								<div class="list-group-item">
+									<div class="row">
+										<div class="col-xs-offset-1 col-xs-11 col-md-offset-3 col-md-3 text-left">
+											<span v-if="item.lprice != null" class="h4">({{item.lname}}){{item.lprice}}</span>
+										</div>
+										<div class="col-xs-11 col-md-3 text-right">
+											<span v-if="item.rprice != null" class="h4">({{item.rname}}){{item.rprice}}</span>
+										</div>
+									</div>
+									<div v-if="item.comment" class="row text-center text-success">
+										<div>{{{item.comment}}}</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<h4>{{{answerDescription}}}</h4>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section v-if="isShowAnswer" class="row">
+				<div>
+				<div class="panel panel-success">
+					<div class="panel-heading">
+						<div class="panel-title">解説</div>
+					</div>
+					<div>
+						<h4>{{{answerCommentary}}}</h4>
+					</div>
+				</div>
+				</div>
+			</section>
+			<section v-if="isShowAnswer">
+				<div class="row">
+					<p></p>
+				</div>
+				<div class="row">
+					<button v-on:click="doNext" type="button" class="btn btn-success btn-lg btn-block">次の問題へ</button>
+				</div>
+				<div class="row">
+					<p></p>
+				</div>
+				<div class="row">
+					<button v-on:click="doTop" type="button" class="btn btn-muted btn-lg btn-block">トップへ戻る</button>
+				</div>
+			</section>
+			<section v-if="!isShowAnswer">
+				<div class="row">
+					<button v-on:click="doAnswer" type="button" class="btn btn-primary btn-lg btn-block">解答</button>
+				</div>
+			</section>
+		</div>
+	</div>
+	<script src="../../js/jquery-1.11.0.js"></script>
+	<script src="../../js/vuejs/vue.js"></script>
+	<script src="./quiz.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+{
+    "version": "1.0.0",
+    "qNo": "f1_16_01T01",
+    "qtype": "siwake",
+    "title": "創立費",
+    "field": "f",
+    "lec": "1",
+    "genre": "16",
+    "tags": [],
+    "question": "次の取引について、支出額を繰延資産として計上する場合の仕訳を示しなさい。\n１．第1期期首に、発起人が立替払いをしていた設立費用等400000円を現金で支払った。\n２．第1期決算にあたり、上記支出額を5年間で月割均等償却する。",
+    "items": [
+        {
+            "title": "",
+            "subtitle":"",
+            "lname": null,
+            "lprice": null,
+            "rname": null,
+            "rprice": null
+        }
+    ],
+    "answers": [
+        {
+            "title": null,
+            "subtitle":null,
+            "unit":"",
+            "lname": "創立費",
+            "lprice": 400000,
+            "rname": "現金",
+            "rprice": 400000,
+            "comment":null
+        },
+        {
+            "title": null,
+            "subtitle":null,
+            "unit":"",
+            "lname": "創立費償却",
+            "lprice": 80000,
+            "rname": "創立費",
+            "rprice": 80000,
+            "comment":"400000 * 12ヶ月/60ヶ月 = 80000"
+        }
+    ],
+    "memo": null,
+    "answerDescription": "",
+    "answerCommentary": "",
+    "createdate": "2016/10/24 18:23"
+}

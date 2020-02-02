@@ -1,0 +1,42 @@
+{
+    "version": "1.0.0",
+    "qNo": "f2_02_0101",
+    "qtype": "siwake",
+    "title":"売上割戻引当金",
+    "field": "f",
+    "lec": "2",
+    "genre": "02",
+    "tags": ["売上割戻引当金"],
+    "question": "次の取引について仕訳を示しなさい。但し、三分割法を前提に答えなさい。\n（１）決算において売上高8,000,000円に対して0.2%に相当する額の売上割戻引当金を設定する。\n（２）翌期に32,000円の売上割戻を行い現金で支払った。但し、このうち15,000円は前期の販売に係るものである。",
+    "items": [
+        {
+            "lname": null,
+            "lprice": null,
+            "rname": null,
+            "rprice": null
+        }
+    ],
+    "answers": [
+        {
+            "lname": "売上割戻引当金繰入",
+            "lprice": 16000,
+            "rname": "売上割戻引当金",
+            "rprice": 16000
+        },
+        {
+            "lname": "売上割引引当金",
+            "lprice": 15000,
+            "rname": "現金",
+            "rprice": 32000
+        },
+        {
+            "lname": "売上",
+            "lprice": 17000,
+            "rname": "",
+            "rprice": null
+        }
+    ],
+    "memo": "",
+    "answerDescription": "",
+    "createdate": "2016/10/17 00:04"
+}

@@ -1,0 +1,47 @@
+{
+    "version": "1.0.0",
+    "qNo": "f1_16_02T01",
+    "qtype": "siwake",
+    "title": "開業費",
+    "field": "f",
+    "lec": "1",
+    "genre": "16",
+    "tags": [],
+    "question": "次の取引について、支出額を繰延資産として計上する場合の仕訳を示しなさい。\n１．当社は、会社成立後開業準備のために営業所の賃借料、広告宣伝費など合計800000円を期首に現金で支払った。\n２．決算にあたり、上記支出額を5年間で月割均等償却する",
+    "items": [
+        {
+            "title": "",
+            "subtitle":"",
+            "lname": null,
+            "lprice": null,
+            "rname": null,
+            "rprice": null
+        }
+    ],
+    "answers": [
+        {
+            "title": null,
+            "subtitle":null,
+            "unit":"",
+            "lname": "開業費",
+            "lprice": 800000,
+            "rname": "現金",
+            "rprice": 800000,
+            "comment":null
+        },
+        {
+            "title": null,
+            "subtitle":null,
+            "unit":"",
+            "lname": "開業費償却",
+            "lprice": 160000,
+            "rname": "開業費",
+            "rprice": 160000,
+            "comment":"800000 * 12ヶ月/60ヶ月 = 160000"
+        }
+    ],
+    "memo": "テキスト p388",
+    "answerDescription": "",
+    "answerCommentary": "",
+    "createdate": "2016/10/24 18:37"
+}

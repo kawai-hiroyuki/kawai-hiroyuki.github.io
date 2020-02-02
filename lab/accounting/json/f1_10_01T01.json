@@ -1,0 +1,67 @@
+{
+    "version": "1.0.0",
+    "qNo": "f1_10_01T01",
+    "qtype": "siwake",
+    "title": "建設仮勘定",
+    "field": "f",
+    "lec": "1",
+    "genre": "10",
+    "tags": [],
+    "question": "次の取引について仕訳を示しなさい。\n１．建物を新築するにあたり、契約時の請負業者に対し手付金として5000000円を小切手を振り出して支払った。\n２．出来高50%となったので工事代金の一部として10000000円を小切手を振出して支払った。\n３．建物が完成し、引き渡しを受け、残額5000000円は１ヶ月後に支払うことにした。",
+    "items": [
+        {
+            "title": "",
+            "subtitle":"",
+            "lname": null,
+            "lprice": null,
+            "rname": null,
+            "rprice": null
+        }
+    ],
+    "answers": [
+        {
+            "title": null,
+            "subtitle":null,
+            "unit":"",
+            "lname": "建設仮勘定",
+            "lprice": 5000000,
+            "rname": "当座預金",
+            "rprice": 5000000,
+            "comment":null
+        },
+        {
+            "title": null,
+            "subtitle":null,
+            "unit":"",
+            "lname": "建設仮勘定",
+            "lprice": 10000000,
+            "rname": "当座預金",
+            "rprice": 10000000,
+            "comment":null
+        },
+        {
+            "title": null,
+            "subtitle":null,
+            "unit":"",
+            "lname": "建設",
+            "lprice": 20000000,
+            "rname": "未払金",
+            "rprice": 5000000,
+            "comment":null
+        },
+        {
+            "title": null,
+            "subtitle":null,
+            "unit":"",
+            "lname": "",
+            "lprice": null,
+            "rname": "未払金",
+            "rprice": 5000000,
+            "comment":null
+        }
+    ],
+    "memo": "テキスト p253",
+    "answerDescription": "",
+    "answerCommentary": "",
+    "createdate": "2016/10/24 20:39"
+}

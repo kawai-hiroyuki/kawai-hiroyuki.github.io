@@ -1,0 +1,12 @@
+/** デバッグ用　ボーダーを赤くする */
+/*
+div {
+    border: 1px solid red;
+}
+*/
+
+.siwake-title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px 15px;
+}

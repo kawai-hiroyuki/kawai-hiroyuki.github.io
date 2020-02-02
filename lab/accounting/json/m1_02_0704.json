@@ -1,0 +1,15 @@
+{
+    "version": "1.0.0",
+    "qNo": "m1_02_0704",
+    "field":"m",
+    "lec":"1",
+    "genre":"02",
+    "qtype": "writing",
+    "tags": [],
+    "question": "予定消費賃率を用いるメリットを説明しなさい。",
+    "items": null,
+    "answers": null,
+    "memo": "追加問題２",
+    "answerDescription": "予定消費賃率を用いると計算が迅速化され、原価の期間比較性が確保されるというメリットがある。",
+    "createdate": "2016/10/15 00:38"
+}

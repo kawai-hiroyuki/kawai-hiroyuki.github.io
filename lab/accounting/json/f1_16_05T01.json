@@ -1,0 +1,47 @@
+{
+    "version": "1.0.0",
+    "qNo": "f1_16_05T01",
+    "qtype": "writing",
+    "title": "社債発行費",
+    "field": "f",
+    "lec": "1",
+    "genre": "16",
+    "tags": [],
+    "question": "次の取引について、支出額を繰延資産として計上する場合の仕訳を示しなさい。\n１．当社は、期首に社債を発行し、募集広告費及び取扱手数料など600000円を現金で支払った。\n２．決算にあたり、社債発行費を償還期間3年で月割均等償却する。",
+    "items": [
+        {
+            "title": "",
+            "subtitle":"",
+            "lname": null,
+            "lprice": null,
+            "rname": null,
+            "rprice": null
+        }
+    ],
+    "answers": [
+        {
+            "title": null,
+            "subtitle":null,
+            "unit":"",
+            "lname": "社債発行費",
+            "lprice": 600000,
+            "rname": "現金",
+            "rprice": 600000,
+            "comment":null
+        },
+        {
+            "title": null,
+            "subtitle":null,
+            "unit":"",
+            "lname": "社債発行費償却",
+            "lprice": 200000,
+            "rname": "社債発行費",
+            "rprice": 200000,
+            "comment":"600000 * 12ヶ月/36ヶ月 = 200000"
+        }
+    ],
+    "memo": "テキスト p389",
+    "answerDescription": "",
+    "answerCommentary": "",
+    "createdate": "2016/10/24 18:49"
+}

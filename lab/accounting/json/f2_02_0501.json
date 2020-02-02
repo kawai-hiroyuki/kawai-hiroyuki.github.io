@@ -1,0 +1,48 @@
+{
+    "version": "1.0.0",
+    "qNo": "f2_02_0501",
+    "qtype": "writing",
+    "title": "賞与引当金（２）",
+    "field": "f",
+    "lec": "2",
+    "genre": "02",
+    "tags": [],
+    "question": "以下［資料］より当期の一連の取引について仕訳を示しなさい（当期：X8年4月1日〜X9年3月31日）。なお、前期末において賞与引当金を62,000千円設定している。\n［資料］\n    <table>\n<tr>\n<td>\n賞与計算期間\n</td>\n<td>\n賞与支給見込金額\n</td>\n<td>\n賞与支給日\n</td>\n</tr>\n<tr>\n<td>\nX7年12月〜X8年5月\n</td>\n<td>\n93,000千円\n</td>\n<td>\nX8年6月15日\n</td>\n</tr>\n<tr>\n<td>\nX8年6月〜X9年11月\n</td>\n<td>\n96,000千円\n</td>\n<td>\nX8年12月15日\n</td>\n</tr>\n<tr>\n<td>\nX8年12月〜X9年5月\n</td>\n<td>\n99,000千円\n</td>\n<td>\nX9年6月15日\n</td>\n</tr>\n</table>\n（１）X8年6月15日 従業員賞与93,000千円を現金で支払った。\n（２）X8年12月15日 従業員賞与96,000千円を現金で支払った。\n（３）X8年3月31日 決算に際し、賞与引当金を設定する（月割計算）。",
+    "items": [
+        {
+            "lname": null,
+            "lprice": null,
+            "rname": null,
+            "rprice": null
+        }
+    ],
+    "answers": [
+        {
+            "lname": "賞与引当金",
+            "lprice": 62000,
+            "rname": "現金",
+            "rprice": 93000
+        },
+        {
+            "lname": "従業員賞与",
+            "lprice": 31000,
+            "rname": "",
+            "rprice": null
+        },
+        {
+            "lname": "従業員賞与",
+            "lprice": 96000,
+            "rname": "現金",
+            "rprice": 96000
+        },
+                {
+            "lname": "賞与引当金繰入",
+            "lprice": 66000,
+            "rname": "賞与引当金",
+            "rprice": 66000
+        }
+    ],
+    "memo": null,
+    "answerDescription": "",
+    "createdate": "2016/10/17 00:38"
+}

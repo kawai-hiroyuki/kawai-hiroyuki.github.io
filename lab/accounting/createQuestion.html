@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- android chrome theme-color -->
+    <meta name="theme-color" content="#337ab7">
+    <title>問題作成</title>
+    <link rel="stylesheet" href="../../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div id="accounting">
+        <div class="container-fluid">
+            <div class="center-block text-center">
+                <h1 class="h4">問題作成</h1>
+            </div>
+            <section>
+            <div class="form-group">
+                <label for="qtype">種類:</label>
+                <select v-model="qtype" class="form-control" id="qtype" @change="doChangeQType()">
+                    <option value="writing" selected>論述式</option>
+                    <option value="siwake">仕訳</option>
+                    <option value="zentb">決算前残高試算表</option>
+                <!-- <option>仕訳</option> -->
+                </select>
+            </div>
+            </section>
+            <section>
+            <div class="form-group">
+                <label for="field">分野:</label>
+                <select v-model="field" class="form-control" id="field" @change="doChangeField()">
+                    <option value="f" selected>財務会計</option>
+                    <option value="m">管理会計</option>
+                    <option value="c">会社法</option>
+                    <option value="a">監査論</option>
+                </select>
+                <label for="lec">レクチャー:</label>
+                <select v-model="lec" class="form-control" id="lec" @change="doChangeLec()">
+                    <option value="1" selected>レクチャー1</option>
+                    <option value="2">レクチャー2</option>
+                    <option value="3">レクチャー3</option>
+                    <option value="4">レクチャー4</option>
+                    <option value="5">レクチャー5</option>
+                </select>
+                <label for="genre">ジャンル</label>
+                <select v-model="genre" class="form-control" id="genre" @change="doChangeGenre()">
+                    <option disabled>──────────管理会計1</option>
+                    <option value="01" selected>第1章 管理会計論総論</option>
+                    <option value="02">第2章 費目別計算</option>
+                    <option value="03">第3章 部門別計算</option>
+                    <option value="04">第4章 個別原価計算</option>
+                    <option value="05">第5章 総合原価計算</option>
+                    <option value="06">第6章 標準原価計算</option>
+                    <option value="07">補章 営業費計算</option>
+                    <option disabled>──────────財務会計1</option>
+                    <option value="01">第1章 財務諸表</option>
+                    <option value="02">第2章 商品売買</option>
+                    <option value="03">第3章 棚卸資産の期末評価</option>
+                    <option value="04">第4章 現金及び預金</option>
+                    <option value="05">第5章 割引現在価値</option>
+                    <option value="06">第6章 債券・債務等</option>
+                    <option value="07">第7章 貸倒れと貸倒引当金</option>
+                    <option value="08">第8章 有価証券</option>
+                    <option value="09">第9章 デリバティブ取引・ヘッジ会計等</option>
+                    <option value="10">第10章 有形固定資産</option>
+                    <option value="11">第11章 リース取引</option>
+                    <option value="12">第12章 無形固定資産</option>
+                    <option value="13">第13章 研究開発費とソフトウェア</option>
+                    <option value="14">第14章 投資その他の資産</option>
+                    <option value="15">第15章 固定資産の減損</option>
+                    <option value="16">第16章 繰延資産</option>
+                    <option disabled>──────────財務会計2</option>
+                    <option value="01">第1章 社債</option>
+                    <option value="02">第2章 引当金</option>
+                    <option value="03">第3章 退職給付</option>
+                    <option value="04">第4章 資産除去債務</option>
+                    <option value="05">第5章 純資産</option>
+                    <option value="06">第6章 新株予約権と新株予約権付社債</option>
+                    <option value="07">第7章 ストック・オプション</option>
+                    <option value="08">第8章 税金</option>
+                    <option value="09">第9章 税効果会計</option>
+                    <option value="10">第10章 外貨建取引</option>
+                </select>
+            </div>
+            </section>
+            <section>
+                <label for="qNo">番号:</label>
+                <input v-model="qNo" id="question" class="form-control" type="text" placeholder="番号">
+            </section>
+            <section>
+                <label for="title">タイトル:</label>
+                <input v-model="title" id="title" class="form-control" type="text" placeholder="タイトル">
+            </section>
+            <article>
+                <label for="question">問題:</label>
+                <textarea v-model="question" id="question" class="form-control" rows="8" placeholder="問題"></textarea>
+            </article>
+			<section v-if="isJournaling" class="row">
+                <label for="items">仕訳:</label>
+				<div v-model="items" track-by="$index">
+					<div class="row">
+						<div class="col-xs-10 col-md-5 pull-left">
+							<div class="input-group">
+								<span class="input-group-addon">(</span>
+								<input v-model="item.lname" class="form-control" type="text" placeholder="借方">
+								<span class="input-group-addon">)</span>
+								<input v-model="item.lprice" class="form-control" type="number">
+							</div>
+						</div>
+						<div class="col-xs-offset-1 col-xs-10 col-md-5">
+							<div class="input-group">
+								<span class="input-group-addon">(</span>
+								<input v-model="item.rname" class="form-control" type="text" placeholder="貸方">
+								<span class="input-group-addon">)</span>
+								<input v-model="item.rprice" class="form-control" type="number">
+							</div>
+						</div>
+						<div class="col-xs-1 col-md-1">
+							<div>
+								<button v-on:click="doAdd($index)" class="btn btn-warning" type="button">+</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+            <section>
+                <label for="answerDescription">解答:</label>
+                <textarea v-model="answerDescription" id="answerDescription" class="form-control" rows="6" placeholder="解答"></textarea>
+            </section>
+            <section>
+                <label for="answerCommentary">解説:</label>
+                <textarea v-model="answerCommentary" id="answerCommentary" class="form-control" rows="6" placeholder="解説"></textarea>
+            </section>
+            <section>
+                <label for="memo">メモ:</label>
+                <textarea v-model="memo" id="memo" class="form-control" rows="2" placeholder="メモ"></textarea>
+            </section>
+            <section>
+                <button v-on:click="doConvertJSON" type="button" class="btn btn-primary btn-lg btn-block">変換</button>
+            </section>
+            <section>
+                <label for="resultJson">変換結果:</label>
+                <textarea v-model="resultJson" id="resultJson" class="form-control" rows="10" placeholder="変換結果" readonly="readonly"></textarea>
+            </section>
+            <br>
+            <br>
+            <br>
+            <footer>
+            </footer>
+        </div>
+    </div>
+    <script src="../../js/jquery-1.11.0.js"></script>
+    <script src="../../js/vuejs/vue.min.js"></script>
+    <script src="./createQuestion.js"></script>
+</body>
+</html>

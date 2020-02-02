@@ -1,0 +1,47 @@
+{
+    "version": "1.0.0",
+    "qNo": "f1_10_02T01",
+    "qtype": "siwake",
+    "title": "通常の購入",
+    "field": "f",
+    "lec": "1",
+    "genre": "10",
+    "tags": [],
+    "question": "次の取引について仕訳を示しなさい。\n機械（定価：5000円）を現金で購入した。その際、以下の費用等が生じた。\n値引額50円、割戻額20円、運送費25円、据付費15円、買入手数料8円、試運転費12円、据え付けるまでの運送保険料3円、稼働開始後1年分の保険料2円",
+    "items": [
+        {
+            "title": "",
+            "subtitle": "",
+            "lname": null,
+            "lprice": null,
+            "rname": null,
+            "rprice": null
+        }
+    ],
+    "answers": [
+        {
+            "title": null,
+            "subtitle": null,
+            "unit": "",
+            "lname": "機械",
+            "lprice": 4993,
+            "rname": "現金",
+            "rprice": 4995,
+            "comment": null
+        },
+        {
+            "title": null,
+            "subtitle": null,
+            "unit": "",
+            "lname": "支払手数料",
+            "lprice": 2,
+            "rname": "",
+            "rprice": null,
+            "comment": "5000-50-20+25+15+8+12+3=4993\nなお、稼働開始後に要する保険料は取得原価に参入せず、期間費用として処理する。"
+        }
+    ],
+    "memo": "テキスト p254",
+    "answerDescription": "",
+    "answerCommentary": "",
+    "createdate": "2016/10/24 20:49"
+}

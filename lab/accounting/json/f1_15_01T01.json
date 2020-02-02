@@ -1,0 +1,37 @@
+{
+    "version": "1.0.0",
+    "qNo": "f1_15_01T01",
+    "qtype": "siwake",
+    "title": "減損処理",
+    "field": "f",
+    "lec": "1",
+    "genre": "15",
+    "tags": [],
+    "question": "以下の資料に基づいて、必要な会計処理を示しなさい。\n厳しい経営環境が続き、当社の定番商品Aの売上が落ち込んでおり、その生産に要している機械a（簿価価額：250百万円）の稼働率もかなり低下している。このため、機械aの収益性が低下しているものとして、減損損失70百万円を計上する。",
+    "items": [
+        {
+            "title": "",
+            "subtitle":"",
+            "lname": null,
+            "lprice": null,
+            "rname": null,
+            "rprice": null
+        }
+    ],
+    "answers": [
+        {
+            "title": null,
+            "subtitle":null,
+            "unit":"百万円",
+            "lname": "減損損失",
+            "lprice": 70,
+            "rname": "機械装置",
+            "rprice": 70,
+            "comment":null
+        }
+    ],
+    "memo": "テキスト p352",
+    "answerDescription": "",
+    "answerCommentary": "",
+    "createdate": "2016/10/24 17:28"
+}

@@ -1,0 +1,42 @@
+{
+    "version": "1.0.0",
+    "qNo": "f2_02_0601",
+    "qtype": "siwake",
+    "title": "修繕引当金",
+    "field": "f",
+    "lec": "2",
+    "genre": "02",
+    "tags": [],
+    "question": "以下の取引について仕訳を示しなさい。\n（１）決算において次期に行われる予定の営業用建物の修繕に備えて修繕引当金500,000円を設定した。\n（２）翌期に、当該営業用建物の修繕を行い、修繕費600,000円を小切手で支払った。",
+    "items": [
+        {
+            "lname": null,
+            "lprice": null,
+            "rname": null,
+            "rprice": null
+        }
+    ],
+    "answers": [
+        {
+            "lname": "修繕引当金繰入",
+            "lprice": 500000,
+            "rname": "修繕引当金",
+            "rprice": 500000
+        },
+        {
+            "lname": "修繕引当金",
+            "lprice": 500000,
+            "rname": "当座預金",
+            "rprice": 600000
+        },
+        {
+            "lname": "修繕費",
+            "lprice": 100000,
+            "rname": "",
+            "rprice": null
+        }
+    ],
+    "memo": null,
+    "answerDescription": "",
+    "createdate": "2016/10/17 00:55"
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="keywords" content="Chinese,Pinyin,中国語,ピンイン,クイズ,4択,汉语,拼音" />
+<meta name="author" content="Kawai.Hiroyuki">
+<meta name="description" content="中国語Webトレーニング" />
+<title>データ取得用</title>
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../chinese_mean6_list_test.js"></script>
+</head>
+<body>
+<script>
+	console.log("start");
+
+	// [問題文(単語）,解答(意味),ピンイン,解説,得点]
+	function question(value) {
+		this.question=value[0];		//名前
+		this.mean=value[1];		// 解答(意味)
+		this.pinyin=value[2];		//ピンイン
+		this.desc=value[3];		//解説
+		this.point=value[4];		//得点
+	}
+
+	// 10個だけ取り出す
+	$.each(questions.slice(0, 10), function() {
+		var q = new question(this);
+		console.log("問題:" + q.question);
+		console.log("解答(意味):" + q.mean);
+		console.log("ピンイン:" + q.pinyin);
+		console.log("解説:" + q.desc);
+		console.log("得点:" + q.point);
+	});
+
+	// 配列からランダムに取り出す
+	function getRandomNumber() {
+		// 乱数を発生させる
+		return 1 + Math.floor(Math.random() * questions.length);
+	}
+
+	console.log("乱数1:" + getRandomNumber(questions));
+	console.log("乱数2:" + getRandomNumber(questions));
+	console.log("乱数3:" + getRandomNumber(questions));
+
+	var q = new question(questions[getRandomNumber()]);
+	console.log("データ:" + q.question);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+{
+    "version": "1.0.0",
+    "qNo": "f1_10_18T01",
+    "qtype": "writing",
+    "title": "国庫補助金（圧縮記帳）",
+    "field": "f",
+    "lec": "1",
+    "genre": "10",
+    "tags": [],
+    "question": "以下の取引について仕訳を示しなさい（決算日：３月３１日）\n１．4月1日　機械を取得するため200000千円の国庫補助金の交付を受け、当座預金とした。\n２．4月2日　上記補助金を充当して機械800000千円を購入し、代金は小切手を振り出して支払った。なお、当該機械について200000千円の圧縮記帳を行った。\n３．決算において機械の減価償却を行う。耐用年数は4年、残存価額はゼロとして定額法により計算する。",
+    "items": [
+        {
+            "title": "",
+            "subtitle": "",
+            "lname": null,
+            "lprice": null,
+            "rname": null,
+            "rprice": null
+        }
+    ],
+    "answers": [
+        {
+            "title": null,
+            "subtitle": null,
+            "lname": "当座預金",
+            "lprice": 200000,
+            "rname": "国庫補助金受贈益",
+            "rprice": 200000,
+            "comment": "国庫補助金は利益とみなされ、基本的には課税対象を構成する。"
+        },
+        {
+            "title": null,
+            "subtitle": null,
+            "lname": "機械",
+            "lprice": 800000,
+            "rname": "当座預金",
+            "rprice": 800000,
+            "comment": null
+        },
+        {
+            "title": null,
+            "subtitle": null,
+            "lname": "機械圧縮損",
+            "lprice": 200000,
+            "rname": "機械",
+            "rprice": 200000,
+            "comment": "圧縮額200000千円を取得原価から費用計上によって直接減額する。費用（圧縮損）を計上することにより、１．の国庫補助金受贈益は実質的に相殺される。"
+        },
+        {
+            "title": null,
+            "subtitle": null,
+            "lname": "減価償却費",
+            "lprice": 150000,
+            "rname": "減価償却累計額",
+            "rprice": 150000,
+            "comment": "(800000-200000)*1年/4年=150000"
+        }
+    ],
+    "unit": "千円",
+    "memo": null,
+    "answerDescription": "",
+    "answerCommentary": "",
+    "createdate": "2016/10/24 23:05"
+}

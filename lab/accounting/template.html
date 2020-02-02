@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>貸倒引当金</title>
+    <link rel="stylesheet" href="../../css/bootstrap/bootstrap.css">
+</head>
+
+<body>
+    <div id="accounting">
+        <div class="container">
+            <div class="center-block text-center">
+                <h1>財務会計</h1>
+            </div>
+            <article>
+                <p class="bg-info">{{{q.question}}}</p>
+            </article>
+            <section>
+                <div v-for="(index, item) in q.items" track-by="$index" class="row">
+                        <div class="col-xs-11 col-md-5 pull-left">
+                            <div class="input-group">
+                                <span class="input-group-addon">(</span>
+                                <input v-model="item.lname" class="form-control" type="text" placeholder="借方">
+                                <span class="input-group-addon">)</span>
+                                <input v-model="item.lprice" class="form-control" type="number">
+                            </div>
+                        </div>
+                        <div class="col-xs-11 col-md-5">
+                            <div class="input-group">
+                                <span class="input-group-addon">(</span>
+                                <input v-model="item.rname" class="form-control" type="text" placeholder="貸方">
+                                <span class="input-group-addon">)</span>
+                                <input v-model="item.rprice" class="form-control" type="number">
+                            </div>
+                        </div>
+                        <div class="col-xs-1 col-md-1">
+                            <div v-if="index == q.items.length - 1">
+                                <button v-on:click="doAdd($index)" class="btn btn-warning" type="button">+</button>
+                            </div>
+                            <div v-if="$index != 0">
+                                <button v-on:click="doRemove($index)" class="btn btn-info" type="button">-</button>
+                            </div>
+                        </div>
+                        <div v-if="isDebug" class="hidden-xs">
+                        <p>item.lprice = {{ item.lprice }} , index = {{ index }}</p>
+                        <p>items[0].lprice = {{ items[0].lprice }} , index = {{ index }}</p>
+                        <p>items[index].lprice = {{ items[index].lprice }} , index = {{ index }}</p>
+                        </div>
+                </div>
+            </section>
+            <section v-if="isShowAnswer">
+                <!-- 正解欄 -->
+                <div class="bg-danger">
+                    <div class="center-block text-center">
+                    <h3 class="text-danger">{{answerTitle}}</h3>
+                    </div>
+                <div v-for="(index, item) in q.answers" track-by="$index" class="row">
+                        <div class="col-xs-11 col-md-5 pull-left">
+                            <span>({{item.lname}}){{item.lprice}}</span>
+                        </div>
+                        <div class="col-xs-11 col-md-5">
+                            <span>({{item.rname}}){{item.rprice}}</span>
+                        </div>
+                </div>
+                <div class="center-block text-center">
+                <p>{{q.answerDescription}}</p>
+                </div>
+                </div>
+                <button v-on:click="doNext" type="button" class="btn btn-success btn-lg btn-block">次の問題へ</button>
+            </section>
+            <section v-if="!isShowAnswer">
+                <button v-on:click="doAnswer" type="button" class="btn btn-primary btn-lg btn-block">解答</button>
+                <button v-on:click="doTest" type="submit" class="btn btn-default btn-lg btn-block">デバッグ用</button>
+            </section>
+        </div>
+    </div>
+    <script src="../../js/jquery-1.11.0.js"></script>
+    <script src="../../js/vuejs/vue.js"></script>
+    <script>
+        var quiz = {
+                qNo:"7-1(1)",
+                tags:["不渡手形", "貸倒れの処理"],
+                question:"<p>前期に不渡りとなり償還請求していた大津商店振出しの約束手形350,000円について、当期になってから手形金額の一部210,000円を現金で受取り、残額140,000円は貸倒れとして処理した。</p><p>ただし、貸倒引当金が前月末において180,000円設定されていた。</p>",
+                items:[{lname:null, lprice: null, rname: null, rprice: null}],
+                answers:[{lname:'現金', lprice: 210000, rname: '不渡手形', rprice: 350000},
+                    {lname:'貸倒引当金', lprice: 140000, rname: '', rprice: null},
+                ],
+                answerDescription:'',
+            };
+    </script>
+    <script src="./accounting.js"></script>
+</body>
+</html>
